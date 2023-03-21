@@ -3,8 +3,7 @@ use SplObserver;
 use SplSubject;
 
 class Game {
-	private $nest = array();
-    
+    private $nest = array();
     public function __construct() {
         $queen = new Queen();
         for( $i = 0; $i < 5; $i++) {
@@ -18,7 +17,7 @@ class Game {
         }
         $this->nest[] = $queen;
     }
-
+	
     public function show() {
         echo '<ul>';        
         foreach ($this->nest as $wasp){
@@ -42,7 +41,6 @@ class Game {
     private function getAliveWasps() {
         return array_filter($this->nest, function ($wasp) { return $wasp->isAlive(); });
     }
-
     public function hitRandomWasp() {
         $aliveWasps = $this->getAliveWasps();
         $randomWaspIdx = array_rand($aliveWasps);
@@ -54,7 +52,6 @@ abstract class Wasp implements SplObserver {
     public $type;
     public $hitPts;
     protected $lostPts;
-
     public function __construct($type, $hitPts, $lostPts) {
         $this->type = $type;
         $this->hitPts = $hitPts;
