@@ -20,7 +20,7 @@ class Game {
 
     public function loadWaspAsset($isAlive, $asset, $points) {
         return ($isAlive) ? "<img class='wasp-style ' src=".$asset." /><span class='hitpoint'>".$points."</span>" : 
-        "<img class='wasp-style imgfade' src='worker.jpg' />"; 
+        "<img class='wasp-style imgfade' src=".$asset." />"; 
     }
 
     public function show() {
