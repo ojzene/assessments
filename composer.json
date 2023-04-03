@@ -1,0 +1,19 @@
+{
+    "name": "kanmit/wasp-game",
+    "autoload": {
+        "psr-4": {
+            "Kanmit\\WaspGame\\": "/"
+        }
+    },
+    "license": "ISC",
+    "require-dev": {
+        "phpunit/phpunit": "10"
+    },
+    "authors": [
+        {
+            "name": "Owolabi Oyekanmi Tolulope",
+            "email": "ttconfirmed@gmail.com"
+        }
+    ],
+    "require": {}
+}
