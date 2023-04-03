@@ -31,12 +31,6 @@ final class GameTest extends TestCase {
         
         $this->assertSame("Drone", $drone->type);
         $this->assertTrue($drone->isAlive());
-
-        // $this->assertCount(1, $game->hit());
-
-        // $this->assertTrue($user->removeFavoriteMovie('Avengers'));
-        // $this->assertNotContains('Avengers', $user->favorite_movies);
-        // $this->assertCount(1, $user->favorite_movies);
     }
 
 }
