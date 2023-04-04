@@ -17,7 +17,9 @@ class Game {
         }
         $this->nest[] = $queen;
     }
-	
+
+// show() function to be used during css game display, commented out for testing
+/*
     public function show() {
         echo '<ul>';        
         foreach ($this->nest as $wasp){
@@ -37,6 +39,7 @@ class Game {
                 </form>';
         }
     }
+  */
 
     private function getAliveWasps() {
         return array_filter($this->nest, function ($wasp) { return $wasp->isAlive(); });
@@ -122,10 +125,4 @@ if (!isset($_SESSION["game"]) || isset($_POST["new"]))
     $_SESSION["game"] = new Game();
 if (isset($_POST["hit"])) $_SESSION["game"]->hitRandomWasp();
 ?>
-<!DOCTYPE html>
-<html>
-    <head><title>Wasp Game</title></head>
-    <body>
-        <?php $_SESSION["game"]->show(); ?>
-    </body>
-</html>
+
